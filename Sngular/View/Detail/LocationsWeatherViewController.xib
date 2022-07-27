@@ -69,14 +69,8 @@
                         <constraint firstItem="Nvt-3a-edX" firstAttribute="centerX" secondItem="8ED-qP-dBW" secondAttribute="centerX" id="zld-5T-pg1"/>
                     </constraints>
                 </view>
-                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kbc-t0-jsH">
-                    <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                    <items>
-                        <navigationItem title="Location's Weather" id="618-ND-Hnb"/>
-                    </items>
-                </navigationBar>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4EG-OW-hnw">
-                    <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qxg-g9-lLZ">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="575"/>
@@ -334,11 +328,11 @@
                                 </view>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mq3-dD-hMf">
                                     <rect key="frame" x="20" y="524" width="374" height="31"/>
-                                    <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                    <color key="backgroundColor" systemColor="systemGray6Color"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="31" id="R4q-SI-gw0"/>
                                     </constraints>
-                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="tintColor" systemColor="linkColor"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" title="Wanna see next 5 days?"/>
                                     <connections>
@@ -370,6 +364,7 @@
                             </constraints>
                         </view>
                     </subviews>
+                    <color key="backgroundColor" systemColor="linkColor"/>
                     <constraints>
                         <constraint firstItem="Qxg-g9-lLZ" firstAttribute="width" secondItem="tQB-qh-jjm" secondAttribute="width" id="6sb-yx-D1p"/>
                         <constraint firstItem="Qxg-g9-lLZ" firstAttribute="leading" secondItem="2JY-0B-02Z" secondAttribute="leading" id="FDG-YE-ukI"/>
@@ -382,23 +377,20 @@
                 </scrollView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" systemColor="systemBrownColor"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="8ED-qP-dBW" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="04P-ka-MaQ"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="2bU-vk-zNI" secondAttribute="bottom" id="0Te-aL-W3T"/>
                 <constraint firstItem="4EG-OW-hnw" firstAttribute="width" secondItem="vUN-kp-3ea" secondAttribute="width" id="6Jx-eN-Zfk"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="2bU-vk-zNI" secondAttribute="trailing" id="GPb-at-XPh"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="kbc-t0-jsH" secondAttribute="trailing" id="HLO-xd-JpH"/>
-                <constraint firstItem="kbc-t0-jsH" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Kzp-LN-6Km"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="8ED-qP-dBW" secondAttribute="bottom" id="Q9U-Ms-wfe"/>
+                <constraint firstItem="4EG-OW-hnw" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Qgn-GL-4Px"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="8ED-qP-dBW" secondAttribute="trailing" id="XTb-fg-zgm"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="4EG-OW-hnw" secondAttribute="bottom" id="fAP-vK-4La"/>
                 <constraint firstItem="4EG-OW-hnw" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="krT-OH-kcR"/>
-                <constraint firstItem="kbc-t0-jsH" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="pb5-VA-rac"/>
                 <constraint firstItem="2bU-vk-zNI" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="qFl-yy-l34"/>
                 <constraint firstItem="8ED-qP-dBW" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="wDC-y8-YxK"/>
                 <constraint firstItem="2bU-vk-zNI" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="x0Q-C4-dOp"/>
-                <constraint firstItem="4EG-OW-hnw" firstAttribute="top" secondItem="kbc-t0-jsH" secondAttribute="bottom" id="yyr-PU-35g"/>
             </constraints>
             <point key="canvasLocation" x="131.8840579710145" y="66.964285714285708"/>
         </view>
@@ -411,14 +403,14 @@
         <image name="icon_pressure" width="64" height="64"/>
         <image name="icon_visibility" width="64" height="64"/>
         <image name="icon_wind" width="64" height="64"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemBrownColor">
-            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGrayColor">
-            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

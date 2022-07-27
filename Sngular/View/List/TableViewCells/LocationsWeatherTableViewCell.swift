@@ -7,17 +7,46 @@
 
 import UIKit
 
-class LocationsWeatherTableViewCell: UITableViewCell {
+class LocationsWeatherTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegate {
+
+    var collectionView: UICollectionView!
+    var dateLabel: UILabel!
+    
+    var locationsWeatherListResponse: LocationsWeatherListResponse?
+    var dayIndex: Int?
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    }
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
+        return self.locationsWeatherListResponse?.days?[self.dayIndex!].list.count ?? 0
+    }
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! LocationsWeatherItemCollectionViewCell
+        
+        cell.loadData(time: self.locationsWeatherListResponse?.days?[self.dayIndex!].list[indexPath.row].dt_txt.getTime() ?? Constants.CONST_NO_DATA, temperature: self.locationsWeatherListResponse?.days?[self.dayIndex!].list[indexPath.row].main.temp.toString().toDegrees() ?? Constants.CONST_NO_DATA)
+        
+        return cell
+    }
+    func initView(locationsWeatherListResponse: LocationsWeatherListResponse?, dayIndex: Int){
+        self.locationsWeatherListResponse = locationsWeatherListResponse
+        self.dayIndex = dayIndex
+        
+        self.collectionView = viewWithTag(2) as? UICollectionView
+        self.dateLabel = viewWithTag(1) as? UILabel
+        
+        self.collectionView.delegate = self
+        self.collectionView.dataSource = self
+        
+        let nib = UINib(nibName: "LocationsWeatherItemCollectionViewCell", bundle: nil)
+        self.collectionView.register(nib, forCellWithReuseIdentifier: "cell")
+        
+        self.dateLabel.text = self.locationsWeatherListResponse?.days?[dayIndex].date
+        self.collectionView.reloadData()
     }
     
 }

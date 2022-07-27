@@ -33,4 +33,32 @@ extension String {
     func toPressure() -> String {
         return self + " hPa"
     }
+    func getDate() -> String{
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        dateFormatter.timeZone = TimeZone(identifier: "UTC")
+        guard let date = dateFormatter.date(from: self) else {
+            return ""
+        }
+        
+        dateFormatter.dateFormat = "dd MMMM yyyy"
+        dateFormatter.timeZone = TimeZone(identifier: "UTC")
+        let timeStamp = dateFormatter.string(from: date)
+        
+        return timeStamp
+    }
+    func getTime() -> String{
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        dateFormatter.timeZone = TimeZone(identifier: "UTC")
+        guard let date = dateFormatter.date(from: self) else {
+            return ""
+        }
+        
+        dateFormatter.dateFormat = "HH:mm"
+        dateFormatter.timeZone = TimeZone(identifier: "UTC")
+        let timeStamp = dateFormatter.string(from: date)
+        
+        return timeStamp
+    }
 }

@@ -18,7 +18,8 @@ class LocationsWeatherListInteractor: AnyLocationsWeatherListInteractor {
                 return
             }
             do {
-                let entities = try JSONDecoder().decode(LocationsWeatherListResponse.self, from: data)
+                var entities = try JSONDecoder().decode(LocationsWeatherListResponse.self, from: data)
+                entities.filterByDays()
                 self?.presenter?.interactorDidFetchLocationsWeatherList(with: .success(entities))
             }
             catch {

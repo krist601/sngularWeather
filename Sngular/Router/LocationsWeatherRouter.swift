@@ -25,8 +25,6 @@ class LocationsWeatherRouter: AnyRouter {
         
         router.entry = view as? EntryPoint
         
-        print(router.entry)
-        
         return router
     }
 }

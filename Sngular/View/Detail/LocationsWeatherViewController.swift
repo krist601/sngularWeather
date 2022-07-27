@@ -47,6 +47,7 @@ class LocationsWeatherViewController: UIViewController, AnyLocationsWeatherView 
         self.windView.layer.cornerRadius = Constants.CONST_CORNER_RADIOUS
         self.visibilityView.layer.cornerRadius = Constants.CONST_CORNER_RADIOUS
         self.temperatureView.layer.cornerRadius = Constants.CONST_CORNER_RADIOUS
+        self.title = "Sngular Weather"
     }
     
     func update(with locationsWeather: LocationsWeatherResponse) {

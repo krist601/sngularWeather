@@ -19,8 +19,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let initialView = locationsWeatherRouter.entry
         
         let initialViewController = UINavigationController(rootViewController: initialView!)
+        initialViewController.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.gray]
+        
         let window = UIWindow(windowScene: windowScene)
         window.rootViewController = initialViewController
+        window.tintColor = .gray
         self.window = window
         window.makeKeyAndVisible()
     }

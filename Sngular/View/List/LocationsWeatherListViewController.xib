@@ -23,16 +23,16 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="V0u-i6-joi">
-                    <rect key="frame" x="-1" y="38" width="414" height="818"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="200" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="V0u-i6-joi">
+                    <rect key="frame" x="0.0" y="44" width="414" height="812"/>
+                    <color key="backgroundColor" systemColor="systemBrownColor"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="xUU-dA-AEV"/>
                         <outlet property="delegate" destination="-1" id="KsR-ks-fhD"/>
                     </connections>
                 </tableView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tlB-Io-Z0a">
-                    <rect key="frame" x="0.0" y="0.0" width="413" height="896"/>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tlB-Io-Z0a">
+                    <rect key="frame" x="0.0" y="44" width="413" height="818"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yha-14-EA3">
                             <rect key="frame" x="27.5" y="372.5" width="358" height="151"/>
@@ -43,14 +43,14 @@
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstItem="Yha-14-EA3" firstAttribute="centerY" secondItem="tlB-Io-Z0a" secondAttribute="centerY" id="nqY-nx-wUt"/>
+                        <constraint firstItem="Yha-14-EA3" firstAttribute="centerY" secondItem="tlB-Io-Z0a" secondAttribute="centerY" constant="39" id="nqY-nx-wUt"/>
                         <constraint firstItem="Yha-14-EA3" firstAttribute="width" secondItem="tlB-Io-Z0a" secondAttribute="width" multiplier="0.866828" id="pMs-tm-nAH"/>
-                        <constraint firstItem="Yha-14-EA3" firstAttribute="height" secondItem="tlB-Io-Z0a" secondAttribute="height" multiplier="0.168527" id="qZ6-jG-mMz"/>
+                        <constraint firstItem="Yha-14-EA3" firstAttribute="height" secondItem="tlB-Io-Z0a" secondAttribute="height" multiplier="0.168527" constant="13.144914" id="qZ6-jG-mMz"/>
                         <constraint firstItem="Yha-14-EA3" firstAttribute="centerX" secondItem="tlB-Io-Z0a" secondAttribute="centerX" id="sKB-mk-Rh1"/>
                     </constraints>
                 </view>
-                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xJZ-Xj-byh">
-                    <rect key="frame" x="-1" y="0.0" width="414" height="896"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xJZ-Xj-byh">
+                    <rect key="frame" x="-1" y="44" width="414" height="818"/>
                     <subviews>
                         <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="0Ai-td-0zh">
                             <rect key="frame" x="197" y="438" width="20" height="20"/>
@@ -59,23 +59,23 @@
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstItem="0Ai-td-0zh" firstAttribute="centerX" secondItem="xJZ-Xj-byh" secondAttribute="centerX" id="6xF-8d-UXF"/>
-                        <constraint firstItem="0Ai-td-0zh" firstAttribute="centerY" secondItem="xJZ-Xj-byh" secondAttribute="centerY" id="7j5-h4-Zny"/>
+                        <constraint firstItem="0Ai-td-0zh" firstAttribute="centerY" secondItem="xJZ-Xj-byh" secondAttribute="centerY" constant="39" id="7j5-h4-Zny"/>
                     </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="top" secondItem="V0u-i6-joi" secondAttribute="top" constant="6" id="3ur-p8-iBF"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="top" secondItem="tlB-Io-Z0a" secondAttribute="top" constant="44" id="5SP-K4-dkf"/>
-                <constraint firstItem="xJZ-Xj-byh" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" constant="34" id="67a-Qa-hVX"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="top" secondItem="V0u-i6-joi" secondAttribute="top" id="3ur-p8-iBF"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="top" secondItem="tlB-Io-Z0a" secondAttribute="top" id="5SP-K4-dkf"/>
+                <constraint firstItem="xJZ-Xj-byh" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="67a-Qa-hVX"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="tlB-Io-Z0a" secondAttribute="trailing" constant="1" id="6Zy-UU-AW1"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="xJZ-Xj-byh" secondAttribute="trailing" constant="1" id="6v6-xK-4yB"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="V0u-i6-joi" secondAttribute="trailing" constant="1" id="Cbd-c5-Eos"/>
-                <constraint firstItem="tlB-Io-Z0a" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" constant="34" id="GSf-cV-Xey"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="top" secondItem="xJZ-Xj-byh" secondAttribute="top" constant="44" id="NY2-Wx-wHC"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="V0u-i6-joi" secondAttribute="trailing" id="Cbd-c5-Eos"/>
+                <constraint firstItem="tlB-Io-Z0a" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="GSf-cV-Xey"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="top" secondItem="xJZ-Xj-byh" secondAttribute="top" id="NY2-Wx-wHC"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="V0u-i6-joi" secondAttribute="bottom" constant="6" id="TYu-6I-NW7"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="leading" secondItem="V0u-i6-joi" secondAttribute="leading" constant="1" id="ZGK-0d-QAi"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="leading" secondItem="V0u-i6-joi" secondAttribute="leading" id="ZGK-0d-QAi"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="leading" secondItem="xJZ-Xj-byh" secondAttribute="leading" constant="1" id="qww-gt-eu8"/>
                 <constraint firstItem="tlB-Io-Z0a" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="t7U-rj-ICO"/>
             </constraints>
@@ -85,6 +85,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

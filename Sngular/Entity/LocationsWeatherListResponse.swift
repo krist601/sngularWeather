@@ -8,12 +8,17 @@
 import UIKit
 
 struct LocationsWeatherListResponse: Codable{
-    /*var city: CityEntity
+    var city: CityEntity
     var cod: String
     var message: Double
-    var cnt: Int*/
-    var list: [DaysWeatherEntity]
+    var cnt: Int
+    var list: [TimeWeatherEntity]
+    var days: [DaysEntity]?
 
+    struct DaysEntity: Codable{
+        var date: String
+        var list: [TimeWeatherEntity]
+    }
     struct CityEntity: Codable{
         var id: Int
         var name: String
@@ -21,22 +26,24 @@ struct LocationsWeatherListResponse: Codable{
         var country: String
         var population: Int
         var timezone: Int
+        var sunrise: Int
+        var sunset: Int
         
         struct CoordEntity: Codable{
             var lon: Double
             var lat: Double
         }
     }
-    struct DaysWeatherEntity: Codable{
+    struct TimeWeatherEntity: Codable{
         var dt: Int
-        /*var main: MainEntity
+        var main: MainEntity
         var weather: [WeatherEntity]
         var clouds: CloudsEntity
         var wind: WindEntity
         var visibility: Int
         var pop: Double
         var sys: SysEntity
-        var dt_txt: String*/
+        var dt_txt: String
         
         struct MainEntity: Codable{
             var temp: Double
@@ -53,7 +60,7 @@ struct LocationsWeatherListResponse: Codable{
             var id: Int
             var main: String
             var description: String
-            var icon: Double
+            var icon: String
         }
         struct CloudsEntity: Codable{
             var all: Int
@@ -66,5 +73,24 @@ struct LocationsWeatherListResponse: Codable{
         struct SysEntity: Codable{
             var pod: String
         }
+    }
+    
+    mutating func filterByDays(){
+        var date = ""
+        self.days = []
+        var newList = [TimeWeatherEntity]()
+        list.forEach { item in
+            if(date == item.dt_txt.getDate()){
+                newList.append(item)
+            }else{
+                if(date != ""){
+                    self.days?.append(DaysEntity(date: date, list:  newList))
+                    newList = [TimeWeatherEntity]()
+                }
+                date = item.dt_txt.getDate()
+                newList.append(item)
+            }
+        }
+        self.days?.append(DaysEntity(date: date, list:  newList))
     }
 }
