@@ -95,6 +95,12 @@ class LocationsWeatherViewController: UIViewController, CLLocationManagerDelegat
             self.errorView.isHidden = false
         }
     }
+    func loading(){
+        DispatchQueue.main.async {
+            self.loadingView.isHidden = false
+            self.errorView.isHidden = true
+        }
+    }
     
     //MARK: Button Actions
     
@@ -105,6 +111,7 @@ class LocationsWeatherViewController: UIViewController, CLLocationManagerDelegat
     }
     @IBAction func tryAgainButtonPress(_ sender: Any) {
         self.getLocation()
+        self.loading()
     }
     
     //MARK: Location Management

@@ -366,10 +366,24 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a6Y-xc-wo7">
+                            <rect key="frame" x="110" y="779" width="180" height="31"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="31" id="ZGs-zo-hDC"/>
+                                <constraint firstAttribute="width" constant="180" id="igH-ql-YKt"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Try Again"/>
+                            <connections>
+                                <action selector="tryAgainButtonPress:" destination="-1" eventType="touchUpInside" id="qhu-KM-6NL"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
+                        <constraint firstAttribute="bottom" secondItem="a6Y-xc-wo7" secondAttribute="bottom" constant="8" id="2Ou-oY-Uhv"/>
                         <constraint firstItem="Nvt-3a-edX" firstAttribute="centerY" secondItem="8ED-qP-dBW" secondAttribute="centerY" id="TVn-wb-cXf"/>
+                        <constraint firstItem="a6Y-xc-wo7" firstAttribute="centerX" secondItem="8ED-qP-dBW" secondAttribute="centerX" constant="-7" id="YhX-35-Jfy"/>
                         <constraint firstItem="Nvt-3a-edX" firstAttribute="height" secondItem="8ED-qP-dBW" secondAttribute="height" multiplier="0.168527" id="YmQ-FT-3Jc"/>
                         <constraint firstItem="Nvt-3a-edX" firstAttribute="width" secondItem="8ED-qP-dBW" secondAttribute="width" multiplier="0.866828" id="cku-Io-524"/>
                         <constraint firstItem="Nvt-3a-edX" firstAttribute="centerX" secondItem="8ED-qP-dBW" secondAttribute="centerX" id="zld-5T-pg1"/>
