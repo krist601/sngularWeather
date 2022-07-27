@@ -8,17 +8,18 @@
 import UIKit
 
 class LocationsWeatherListPresenter: AnyLocationsWeatherListPresenter {
-    
+    var lalitude: Double?
+    var longitude: Double?
     var router: AnyRouter?
     var interactor: AnyLocationsWeatherListInteractor? {
         didSet {
-            interactor?.getLocationsWeatherList()
+            interactor?.getLocationsWeatherList(latitude: lalitude!, longitude: longitude!)
         }
     }
     var view: AnyLocationsWeatherListView?
     
-    init(){
-        interactor?.getLocationsWeatherList()
+    func fetchData(latitude: Double, longitude: Double){
+        interactor?.getLocationsWeatherList(latitude: latitude, longitude: longitude)
     }
 
     func interactorDidFetchLocationsWeatherList(with result: Result<LocationsWeatherListResponse, Error>) {

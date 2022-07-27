@@ -9,11 +9,11 @@ import UIKit
 
 protocol AnyLocationsWeatherInteractor {
     var presenter: AnyLocationsWeatherPresenter? { get set }
-    func getLocationsWeather()
+    func getLocationsWeather(latitude: Double, longitude: Double)
 }
 protocol AnyLocationsWeatherListInteractor {
     var presenter: AnyLocationsWeatherListPresenter? { get set }
-    func getLocationsWeatherList()
+    func getLocationsWeatherList(latitude: Double, longitude: Double)
 }
 
 

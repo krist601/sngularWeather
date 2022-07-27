@@ -12,5 +12,10 @@ typealias EntryPoint = AnyView & UIViewController
 
 protocol AnyRouter {
     var entry: EntryPoint? { get }
+}
+protocol AnyLocationsWeatherListRouter: AnyRouter {
+    static func start(latitude: Double, longitude: Double) -> AnyRouter
+}
+protocol AnyLocationsWeatherRouter: AnyRouter {
     static func start() -> AnyRouter
 }

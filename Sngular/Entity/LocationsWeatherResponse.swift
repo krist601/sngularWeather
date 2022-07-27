@@ -43,7 +43,7 @@ struct LocationsWeatherResponse: Codable {
     struct WindEntity: Codable{
         var speed: Double
         var deg: Int
-        var gust: Double
+        var gust: Double?
     }
     struct CloudsEntity: Codable{
         var all: Int

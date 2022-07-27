@@ -10,8 +10,8 @@ import UIKit
 class LocationsWeatherInteractor: AnyLocationsWeatherInteractor {
     var presenter: AnyLocationsWeatherPresenter?
     
-    func getLocationsWeather() {
-        guard let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?lat=35&lon=139&units=metric&appid=\(Constants.CONST_API_KEY)") else { return }
+    func getLocationsWeather(latitude: Double, longitude: Double) {
+        guard let url = URL(string: "\(Constants.CONST_BASE_URL)weather?lat=\(latitude)&lon=\(longitude)&units=metric&appid=\(Constants.CONST_API_KEY)") else { return }
         let task = URLSession.shared.dataTask(with: url){ [weak self] data, _, error in
             guard let data = data, error == nil else{
                 self?.presenter?.interactorDidFetchLocationsWeather(with: .failure(FetchError.failed))

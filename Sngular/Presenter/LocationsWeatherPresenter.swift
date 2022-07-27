@@ -10,15 +10,11 @@ import UIKit
 class LocationsWeatherPresenter: AnyLocationsWeatherPresenter {
     
     var router: AnyRouter?
-    var interactor: AnyLocationsWeatherInteractor? {
-        didSet {
-            interactor?.getLocationsWeather()
-        }
-    }
+    var interactor: AnyLocationsWeatherInteractor? 
     var view: AnyLocationsWeatherView?
     
-    init(){
-        interactor?.getLocationsWeather()
+    func fetchData(latitude: Double, longitude: Double){
+        interactor?.getLocationsWeather(latitude: latitude, longitude: longitude)
     }
 
     func interactorDidFetchLocationsWeather(with result: Result<LocationsWeatherResponse, Error>) {

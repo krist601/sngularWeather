@@ -8,11 +8,12 @@
 import UIKit
 
 class LocationsWeatherItemCollectionViewCell: UICollectionViewCell {
+    
+    //MARK: View Lifecycle
 
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-    
     func loadData(time: String, temperature: String){
         let timeLabel = viewWithTag(1) as? UILabel
         let temperatureLabel = viewWithTag(2) as? UILabel

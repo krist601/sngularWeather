@@ -8,29 +8,24 @@
 import UIKit
 
 class LocationsWeatherTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegate {
-
+    
+    //MARK: Outlets
+    
     var collectionView: UICollectionView!
     var dateLabel: UILabel!
     
+    //MARK: Global Variables
+    
     var locationsWeatherListResponse: LocationsWeatherListResponse?
     var dayIndex: Int?
+    
+    //MARK: View Lifecycle
 
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-    }
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
-        return self.locationsWeatherListResponse?.days?[self.dayIndex!].list.count ?? 0
-    }
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! LocationsWeatherItemCollectionViewCell
-        
-        cell.loadData(time: self.locationsWeatherListResponse?.days?[self.dayIndex!].list[indexPath.row].dt_txt.getTime() ?? Constants.CONST_NO_DATA, temperature: self.locationsWeatherListResponse?.days?[self.dayIndex!].list[indexPath.row].main.temp.toString().toDegrees() ?? Constants.CONST_NO_DATA)
-        
-        return cell
     }
     func initView(locationsWeatherListResponse: LocationsWeatherListResponse?, dayIndex: Int){
         self.locationsWeatherListResponse = locationsWeatherListResponse
@@ -49,4 +44,16 @@ class LocationsWeatherTableViewCell: UITableViewCell, UICollectionViewDataSource
         self.collectionView.reloadData()
     }
     
+    //MARK: CollectionView Management
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
+        return self.locationsWeatherListResponse?.days?[self.dayIndex!].list.count ?? 0
+    }
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! LocationsWeatherItemCollectionViewCell
+        
+        cell.loadData(time: self.locationsWeatherListResponse?.days?[self.dayIndex!].list[indexPath.row].dt_txt.getTime() ?? Constants.CONST_NO_DATA, temperature: self.locationsWeatherListResponse?.days?[self.dayIndex!].list[indexPath.row].main.temp.toString().toDegrees() ?? Constants.CONST_NO_DATA)
+        
+        return cell
+    }
 }

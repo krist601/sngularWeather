@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LocationsWeatherRouter: AnyRouter {
+class LocationsWeatherRouter: AnyLocationsWeatherRouter {
     var entry: EntryPoint?
     
     static func start() -> AnyRouter {
