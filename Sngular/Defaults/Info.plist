@@ -19,7 +19,5 @@
 			</array>
 		</dict>
 	</dict>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>This app uses your localization to personalize your experience</string>
 </dict>
 </plist>
