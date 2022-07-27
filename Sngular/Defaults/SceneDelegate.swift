@@ -13,14 +13,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
-        let locationsWeatherRouter = LocationsWeatherListRouter.start()
+        let locationsWeatherRouter = LocationsWeatherRouter.start()
         let initialView = locationsWeatherRouter.entry
         
+        let initialViewController = UINavigationController(rootViewController: initialView!)
         let window = UIWindow(windowScene: windowScene)
-        window.rootViewController = initialView
+        window.rootViewController = initialViewController
         self.window = window
         window.makeKeyAndVisible()
     }

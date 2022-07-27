@@ -33,6 +33,8 @@
 		EED433CA2890F88700727713 /* LocationsWeatherListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EED433C92890F88700727713 /* LocationsWeatherListViewController.xib */; };
 		EED433CD2890FA2D00727713 /* LocationsWeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED433CB2890FA2D00727713 /* LocationsWeatherTableViewCell.swift */; };
 		EED433CE2890FA2D00727713 /* LocationsWeatherTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EED433CC2890FA2D00727713 /* LocationsWeatherTableViewCell.xib */; };
+		EED433D328917F2900727713 /* LocationsWeatherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EED433D228917F2900727713 /* LocationsWeatherViewController.xib */; };
+		EED433D52891989100727713 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED433D42891989100727713 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +85,8 @@
 		EED433C92890F88700727713 /* LocationsWeatherListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationsWeatherListViewController.xib; sourceTree = "<group>"; };
 		EED433CB2890FA2D00727713 /* LocationsWeatherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsWeatherTableViewCell.swift; sourceTree = "<group>"; };
 		EED433CC2890FA2D00727713 /* LocationsWeatherTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationsWeatherTableViewCell.xib; sourceTree = "<group>"; };
+		EED433D228917F2900727713 /* LocationsWeatherViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationsWeatherViewController.xib; sourceTree = "<group>"; };
+		EED433D42891989100727713 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				EEA12DC32890EB5800354EBC /* Constants.swift */,
+				EED433D42891989100727713 /* Extensions.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -245,6 +250,7 @@
 			isa = PBXGroup;
 			children = (
 				EEA12DC82890EB6400354EBC /* LocationsWeatherViewController.swift */,
+				EED433D228917F2900727713 /* LocationsWeatherViewController.xib */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -364,6 +370,7 @@
 			files = (
 				EEA12D742890E96300354EBC /* LaunchScreen.storyboard in Resources */,
 				EEA12D712890E96300354EBC /* Assets.xcassets in Resources */,
+				EED433D328917F2900727713 /* LocationsWeatherViewController.xib in Resources */,
 				EED433CA2890F88700727713 /* LocationsWeatherListViewController.xib in Resources */,
 				EED433CE2890FA2D00727713 /* LocationsWeatherTableViewCell.xib in Resources */,
 				EEA12D6F2890E96100354EBC /* Main.storyboard in Resources */,
@@ -398,6 +405,7 @@
 				EEA12DCA2890EB6400354EBC /* AnyView.swift in Sources */,
 				EEA12DAF2890EB2D00354EBC /* LocationsWeatherResponse.swift in Sources */,
 				EEA12DB62890EB3D00354EBC /* LocationsWeatherListInteractor.swift in Sources */,
+				EED433D52891989100727713 /* Extensions.swift in Sources */,
 				EEA12DCC2890EB6400354EBC /* LocationsWeatherViewController.swift in Sources */,
 				EEA12DC42890EB5800354EBC /* Constants.swift in Sources */,
 				EEA12D682890E96100354EBC /* AppDelegate.swift in Sources */,

@@ -9,7 +9,7 @@ import UIKit
 
 struct LocationsWeatherResponse: Codable {
     var coord: CoordEntity
-    var weather: WeatherEntity
+    var weather: [WeatherEntity]
     var base: String
     var main: MainEntity
     var visibility: Int
@@ -43,6 +43,7 @@ struct LocationsWeatherResponse: Codable {
     struct WindEntity: Codable{
         var speed: Double
         var deg: Int
+        var gust: Double
     }
     struct CloudsEntity: Codable{
         var all: Int
@@ -50,7 +51,6 @@ struct LocationsWeatherResponse: Codable {
     struct SysEntity: Codable{
         var type: Int
         var id: Int
-        var message: Double
         var country: String
         var sunrise: Int
         var sunset: Int
