@@ -17,14 +17,14 @@ protocol AnyPresenter {
     func fetchData(latitude: Double, longitude: Double)
 }
 protocol AnyLocationsWeatherPresenter: AnyPresenter {
-    func interactorDidFetchLocationsWeather(with result: Result<LocationsWeatherResponse, Error>)
+    func interactorDidFetchLocationsWeather(with result: Result<LocationsWeatherResponse?, Error>)
     var interactor: AnyLocationsWeatherInteractor? { get set }
     var view: AnyLocationsWeatherView? { get set }
 }
 protocol AnyLocationsWeatherListPresenter: AnyPresenter {
     var lalitude: Double? { get set }
     var longitude: Double? { get set }
-    func interactorDidFetchLocationsWeatherList(with result: Result<LocationsWeatherListResponse, Error>)
+    func interactorDidFetchLocationsWeatherList(with result: Result<LocationsWeatherListResponse?, Error>)
     var interactor: AnyLocationsWeatherListInteractor? { get set }
     var view: AnyLocationsWeatherListView? { get set }
 }

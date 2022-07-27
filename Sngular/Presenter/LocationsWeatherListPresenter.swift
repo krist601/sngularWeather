@@ -13,20 +13,27 @@ class LocationsWeatherListPresenter: AnyLocationsWeatherListPresenter {
     var router: AnyRouter?
     var interactor: AnyLocationsWeatherListInteractor? {
         didSet {
-            interactor?.getLocationsWeatherList(latitude: lalitude!, longitude: longitude!)
+            if(lalitude != nil && longitude != nil){
+                interactor?.getLocationsWeatherList(latitude: lalitude!, longitude: longitude!)
+            }
         }
     }
     var view: AnyLocationsWeatherListView?
+    
+    var hasError: Error?
+    var isSuccess = false
     
     func fetchData(latitude: Double, longitude: Double){
         interactor?.getLocationsWeatherList(latitude: latitude, longitude: longitude)
     }
 
-    func interactorDidFetchLocationsWeatherList(with result: Result<LocationsWeatherListResponse, Error>) {
+    func interactorDidFetchLocationsWeatherList(with result: Result<LocationsWeatherListResponse?, Error>) {
         switch result {
         case .success(let locationsWeatherListResponse):
+            isSuccess = true
             view?.update(with: locationsWeatherListResponse)
-        case .failure:
+        case .failure(let error):
+            hasError = error
             view?.update(with: "something went wrong :(")
         }
     }

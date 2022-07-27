@@ -36,6 +36,10 @@
 		EED433D52891989100727713 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED433D42891989100727713 /* Extensions.swift */; };
 		EED433DC2891C20000727713 /* LocationsWeatherItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED433DA2891C20000727713 /* LocationsWeatherItemCollectionViewCell.swift */; };
 		EED433DD2891C20000727713 /* LocationsWeatherItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EED433DB2891C20000727713 /* LocationsWeatherItemCollectionViewCell.xib */; };
+		EED433E42891ECE900727713 /* LocationsWeatherInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED433E32891ECE900727713 /* LocationsWeatherInteractorTests.swift */; };
+		EED433E62891EE0900727713 /* MockLocationsWeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED433E52891EE0900727713 /* MockLocationsWeatherService.swift */; };
+		EED433E82891EE1500727713 /* MockLocationsWeatherListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED433E72891EE1500727713 /* MockLocationsWeatherListService.swift */; };
+		EED433EA2891F62500727713 /* LocationsWeatherListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED433E92891F62500727713 /* LocationsWeatherListInteractorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +93,10 @@
 		EED433D42891989100727713 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		EED433DA2891C20000727713 /* LocationsWeatherItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsWeatherItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		EED433DB2891C20000727713 /* LocationsWeatherItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationsWeatherItemCollectionViewCell.xib; sourceTree = "<group>"; };
+		EED433E32891ECE900727713 /* LocationsWeatherInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsWeatherInteractorTests.swift; sourceTree = "<group>"; };
+		EED433E52891EE0900727713 /* MockLocationsWeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLocationsWeatherService.swift; sourceTree = "<group>"; };
+		EED433E72891EE1500727713 /* MockLocationsWeatherListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLocationsWeatherListService.swift; sourceTree = "<group>"; };
+		EED433E92891F62500727713 /* LocationsWeatherListInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsWeatherListInteractorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +162,10 @@
 			isa = PBXGroup;
 			children = (
 				EEA12D7E2890E96300354EBC /* SngularTests.swift */,
+				EED433E92891F62500727713 /* LocationsWeatherListInteractorTests.swift */,
+				EED433E32891ECE900727713 /* LocationsWeatherInteractorTests.swift */,
+				EED433E72891EE1500727713 /* MockLocationsWeatherListService.swift */,
+				EED433E52891EE0900727713 /* MockLocationsWeatherService.swift */,
 			);
 			path = SngularTests;
 			sourceTree = "<group>";
@@ -428,7 +440,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EED433E42891ECE900727713 /* LocationsWeatherInteractorTests.swift in Sources */,
+				EED433EA2891F62500727713 /* LocationsWeatherListInteractorTests.swift in Sources */,
+				EED433E62891EE0900727713 /* MockLocationsWeatherService.swift in Sources */,
 				EEA12D7F2890E96300354EBC /* SngularTests.swift in Sources */,
+				EED433E82891EE1500727713 /* MockLocationsWeatherListService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

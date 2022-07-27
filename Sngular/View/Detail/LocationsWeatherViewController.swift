@@ -80,7 +80,7 @@ class LocationsWeatherViewController: UIViewController, CLLocationManagerDelegat
     
     //MARK: AnyLocationsWeatherView Impementation
     
-    func update(with locationsWeather: LocationsWeatherResponse) {
+    func update(with locationsWeather: LocationsWeatherResponse?) {
         DispatchQueue.main.async {
             self.loadingView.isHidden = true
             self.errorView.isHidden = true

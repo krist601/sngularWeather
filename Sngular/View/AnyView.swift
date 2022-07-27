@@ -11,10 +11,10 @@ protocol AnyView {
     var presenter: AnyPresenter? { get set }
 }
 protocol AnyLocationsWeatherView: AnyView {
-    func update(with locationsWeather: LocationsWeatherResponse)
+    func update(with locationsWeather: LocationsWeatherResponse?)
     func update(with error: String)
 }
 protocol AnyLocationsWeatherListView: AnyView {
-    func update(with locationsWeatherList: LocationsWeatherListResponse)
+    func update(with locationsWeatherList: LocationsWeatherListResponse?)
     func update(with error: String)
 }

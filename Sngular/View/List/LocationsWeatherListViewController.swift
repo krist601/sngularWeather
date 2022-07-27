@@ -35,7 +35,7 @@ class LocationsWeatherListViewController: UIViewController, AnyLocationsWeatherL
     
     //MARK: AnyLocationsWeatherListView Impementation
     
-    func update(with locationsWeatherList: LocationsWeatherListResponse) {
+    func update(with locationsWeatherList: LocationsWeatherListResponse?) {
         DispatchQueue.main.async {
             self.loadingView.isHidden = true
             self.errorView.isHidden = true
